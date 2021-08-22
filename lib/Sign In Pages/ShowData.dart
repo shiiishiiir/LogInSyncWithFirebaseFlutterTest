@@ -16,6 +16,9 @@ class _ShowDataState extends State<ShowData> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Center(child:Text("Entire Data")),
+      ),
       body: FutureBuilder(
           future: databaseRef.once(),
           builder: (context, AsyncSnapshot<DataSnapshot> snapshot) {
